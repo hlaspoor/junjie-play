@@ -599,13 +599,18 @@ a.game-card:hover {
   }
 
   .game-row {
-    grid-template-columns: 1fr;
-    max-width: 360px;
-    width: min(100%, 360px);
+    grid-template-columns: repeat(2, var(--card-width));
+    width: min(calc(var(--card-width) * 2 + 12px), 100%);
   }
 
   .game-card {
-    width: 100%;
     min-height: 318px;
+  }
+}
+
+@media (max-width: 430px) {
+  .game-row {
+    grid-template-columns: var(--card-width);
+    width: var(--card-width);
   }
 }
