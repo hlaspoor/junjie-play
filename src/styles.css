@@ -26,6 +26,8 @@
   color-scheme: dark;
   color: #e8ded6;
   background: #0e1013;
+  --card-width: 188px;
+  --card-height: 318px;
   font-family: "Proza", sans-serif;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -94,25 +96,21 @@ a {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  gap: 12px;
-  min-height: 38px;
+  gap: 9px;
+  min-height: 30px;
   padding-left: 28px;
   white-space: nowrap;
 }
 
 .brand-logo {
-  width: 28px;
-  height: 28px;
-  border-radius: 7px;
-  box-shadow:
-    0 10px 22px rgba(0, 0, 0, 0.34),
-    0 0 0 1px rgba(216, 178, 135, 0.24);
+  width: 30px;
+  height: 30px;
 }
 
 .hero h1 {
   margin: 0;
   color: #eadbd0;
-  font-size: clamp(22px, 2.6vw, 32px);
+  font-size: clamp(18px, 2vw, 24px);
   font-weight: 700;
   letter-spacing: 0;
   line-height: 1;
@@ -127,10 +125,10 @@ a {
 
 .hero p {
   margin: 0;
-  padding-left: 14px;
+  padding-left: 11px;
   border-left: 1px solid rgba(216, 178, 135, 0.24);
   color: rgba(222, 211, 203, 0.58);
-  font-size: clamp(11px, 1.2vw, 13px);
+  font-size: clamp(10px, 1vw, 12px);
   line-height: 1.2;
 }
 
@@ -138,9 +136,9 @@ a {
   position: relative;
   z-index: 1;
   display: grid;
-  grid-template-columns: repeat(6, minmax(150px, 1fr));
+  grid-template-columns: repeat(6, var(--card-width));
   gap: 12px;
-  width: min(1216px, 100%);
+  width: min(calc(var(--card-width) * 6 + 12px * 5), 100%);
   margin: 0 auto;
 }
 
@@ -149,7 +147,8 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  min-height: 326px;
+  width: var(--card-width);
+  min-height: var(--card-height);
   padding: 24px 18px 18px;
   overflow: hidden;
   border: 1px solid rgba(255, 255, 255, 0.065);
@@ -160,7 +159,6 @@ a {
     inset 0 1px 0 rgba(255, 255, 255, 0.04);
   transition:
     border-color 160ms ease,
-    transform 160ms ease,
     box-shadow 160ms ease;
 }
 
@@ -170,7 +168,6 @@ a.game-card {
 
 a.game-card:hover {
   border-color: rgba(240, 223, 229, 0.34);
-  transform: translateY(-3px);
   box-shadow:
     0 26px 54px rgba(0, 0, 0, 0.42),
     inset 0 1px 0 rgba(255, 255, 255, 0.05);
@@ -565,7 +562,8 @@ a.game-card:hover {
 
 @media (max-width: 1080px) {
   .game-row {
-    grid-template-columns: repeat(3, minmax(180px, 1fr));
+    grid-template-columns: repeat(3, var(--card-width));
+    width: min(calc(var(--card-width) * 3 + 12px * 2), 100%);
   }
 }
 
@@ -587,9 +585,8 @@ a.game-card:hover {
   }
 
   .brand-logo {
-    width: 24px;
-    height: 24px;
-    border-radius: 6px;
+    width: 30px;
+    height: 30px;
   }
 
   .hero h1 {
@@ -604,9 +601,11 @@ a.game-card:hover {
   .game-row {
     grid-template-columns: 1fr;
     max-width: 360px;
+    width: min(100%, 360px);
   }
 
   .game-card {
+    width: 100%;
     min-height: 318px;
   }
 }
