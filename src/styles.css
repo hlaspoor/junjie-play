@@ -393,12 +393,16 @@ a.game-card:hover {
   width: 92%;
   aspect-ratio: 1;
   --piece-fill: #efe9dc;
+  --piece-light: #fff8e8;
+  --piece-edge: #cfc3ac;
   --piece-mark: #222222;
   --piece-stroke: #121514;
 }
 
 .chung-board .piece.red {
   --piece-fill: #6f9b63;
+  --piece-light: #86ae78;
+  --piece-edge: #4f7547;
   --piece-mark: #0b1609;
 }
 
