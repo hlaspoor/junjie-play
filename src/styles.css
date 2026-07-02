@@ -109,8 +109,8 @@ a {
 
 .hero h1 {
   margin: 0;
-  color: #eadbd0;
-  font-size: clamp(18px, 2vw, 24px);
+  color: #f0e5da;
+  font-size: clamp(18px, 2vw, 25px);
   font-weight: 700;
   letter-spacing: 0;
   line-height: 1;
@@ -126,9 +126,9 @@ a {
 .hero p {
   margin: 0;
   padding-left: 11px;
-  border-left: 1px solid rgba(216, 178, 135, 0.24);
-  color: rgba(222, 211, 203, 0.58);
-  font-size: clamp(10px, 1vw, 12px);
+  border-left: 1px solid rgba(216, 178, 135, 0.18);
+  color: rgba(222, 211, 203, 0.48);
+  font-size: clamp(10px, 0.95vw, 11px);
   line-height: 1.2;
 }
 
@@ -369,6 +369,8 @@ a.game-card:hover {
 }
 
 .chung-board span {
+  display: grid;
+  place-items: center;
   min-width: 0;
   min-height: 0;
   border-right: 1px solid #8a9287;
@@ -382,6 +384,39 @@ a.game-card:hover {
 
 .chung-board span:nth-child(n + 7) {
   border-bottom: 0;
+}
+
+.chung-board .piece {
+  z-index: 3;
+  display: grid;
+  place-items: center;
+  width: 92%;
+  aspect-ratio: 1;
+  --piece-fill: #efe9dc;
+  --piece-mark: #222222;
+  --piece-stroke: #121514;
+}
+
+.chung-board .piece.red {
+  --piece-fill: #6f9b63;
+  --piece-mark: #0b1609;
+}
+
+.chung-board .piece svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.chung-board .piece .piece-face,
+.chung-board .piece .piece-shadow-shape {
+  transform-origin: 50px 50px;
+}
+
+.chung-board .piece.diagonal .piece-face,
+.chung-board .piece.diagonal .piece-shadow-shape {
+  transform: rotate(45deg);
 }
 
 .grid-board {
@@ -448,6 +483,55 @@ a.game-card:hover {
   border-radius: 999px;
   background: #38261f;
   box-shadow: inset 0 3px rgba(22, 13, 10, 0.58), inset 0 -2px rgba(116, 78, 58, 0.3);
+}
+
+.shift-board .stone {
+  position: absolute;
+  z-index: 2;
+  display: block;
+  width: 80%;
+  aspect-ratio: 1;
+  border-radius: 999px;
+  background: var(--stone-fill);
+  box-shadow:
+    0 5px rgba(0, 0, 0, 0.26),
+    0 7px 8px rgba(0, 0, 0, 0.18);
+}
+
+.shift-board .stone::before {
+  position: absolute;
+  right: 9%;
+  bottom: 9%;
+  width: 72%;
+  aspect-ratio: 1;
+  content: "";
+  border-radius: inherit;
+  background: var(--stone-crescent);
+  clip-path: polygon(100% 0, 100% 100%, 0 100%);
+  pointer-events: none;
+}
+
+.shift-board .stone::after {
+  position: absolute;
+  right: 15%;
+  bottom: 15%;
+  width: 72%;
+  aspect-ratio: 1;
+  content: "";
+  border-radius: inherit;
+  background: var(--stone-fill);
+  clip-path: polygon(100% 0, 100% 100%, 0 100%);
+  pointer-events: none;
+}
+
+.shift-board .stone.ivory {
+  --stone-fill: #eadfc9;
+  --stone-crescent: #c8b998;
+}
+
+.shift-board .stone.madder {
+  --stone-fill: #c84c48;
+  --stone-crescent: #963331;
 }
 
 .hex-board {
