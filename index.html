@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="junjie's board game playground" />
+    <link rel="stylesheet" href="/src/styles.css" />
+    <title>Board Game Playground</title>
+  </head>
+  <body>
+    <main class="page-shell">
+      <header class="topbar">
+        <a class="logo" href="/" aria-label="Home">JS</a>
+        <button class="favorite-button" type="button" aria-label="Favorites">
+          <span class="star-icon">☆</span>
+          <span>Favorites</span>
+        </button>
+      </header>
+
+      <section class="hero" aria-labelledby="page-title">
+        <h1 id="page-title">Junjie's Board Game Playground</h1>
+        <p>simple rules, deep thinking, infinite fun.</p>
+        <span class="title-rule" aria-hidden="true"></span>
+      </section>
+
+      <section class="game-row" aria-label="Games">
+        <a
+          class="game-card kamisado"
+          href="https://kamisado.pages.dev"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Open Kamisado in a new window"
+        >
+          <div class="card-copy">
+            <h2>Kamisado</h2>
+            <p>reach your opponent's<br />home row with a tower</p>
+          </div>
+          <div class="board kamisado-board" aria-hidden="true">
+            <span class="orange"><i class="tower gold orange"></i></span>
+            <span class="blue"><i class="tower gold blue"></i></span>
+            <span class="purple"><i class="tower gold purple"></i></span>
+            <span class="pink"><i class="tower gold pink"></i></span>
+            <span class="yellow"><i class="tower gold yellow"></i></span>
+            <span class="red"><i class="tower gold red"></i></span>
+            <span class="green"><i class="tower gold green"></i></span>
+            <span class="brown"><i class="tower gold brown"></i></span>
+            <span class="red"></span>
+            <span class="orange"></span>
+            <span class="pink"></span>
+            <span class="green"></span>
+            <span class="blue"></span>
+            <span class="yellow"></span>
+            <span class="brown"></span>
+            <span class="purple"></span>
+            <span class="green"></span>
+            <span class="pink"></span>
+            <span class="orange"></span>
+            <span class="red"></span>
+            <span class="purple"></span>
+            <span class="brown"></span>
+            <span class="yellow"></span>
+            <span class="blue"></span>
+            <span class="pink"></span>
+            <span class="purple"></span>
+            <span class="blue"></span>
+            <span class="orange"></span>
+            <span class="brown"></span>
+            <span class="green"></span>
+            <span class="red"></span>
+            <span class="yellow"></span>
+            <span class="yellow"></span>
+            <span class="red"></span>
+            <span class="green"></span>
+            <span class="brown"></span>
+            <span class="orange"></span>
+            <span class="blue"></span>
+            <span class="purple"></span>
+            <span class="pink"></span>
+            <span class="blue"></span>
+            <span class="yellow"></span>
+            <span class="brown"></span>
+            <span class="purple"></span>
+            <span class="red"></span>
+            <span class="orange"></span>
+            <span class="pink"></span>
+            <span class="green"></span>
+            <span class="purple"></span>
+            <span class="brown"></span>
+            <span class="yellow"></span>
+            <span class="blue"></span>
+            <span class="green"></span>
+            <span class="pink"></span>
+            <span class="orange"></span>
+            <span class="red"></span>
+            <span class="brown"><i class="tower black brown"></i></span>
+            <span class="green"><i class="tower black green"></i></span>
+            <span class="red"><i class="tower black red"></i></span>
+            <span class="yellow"><i class="tower black yellow"></i></span>
+            <span class="pink"><i class="tower black pink"></i></span>
+            <span class="purple"><i class="tower black purple"></i></span>
+            <span class="blue"><i class="tower black blue"></i></span>
+            <span class="orange"><i class="tower black orange"></i></span>
+          </div>
+        </a>
+
+        <a
+          class="game-card chung-toi"
+          href="https://chung-toi.pages.dev"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Open Chung Toi in a new window"
+        >
+          <div class="card-copy">
+            <h2>Chung Toi</h2>
+            <p>tic-tac-toe<br />with a twist</p>
+          </div>
+          <div class="board chung-board" aria-hidden="true">
+            <span></span><span></span><span></span>
+            <span></span><span></span><span></span>
+            <span></span><span></span><span></span>
+          </div>
+        </a>
+
+        <a
+          class="game-card make-shift"
+          href="https://make-shift.pages.dev"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Open Make-Shift in a new window"
+        >
+          <div class="card-copy">
+            <h2>Make-Shift</h2>
+            <p>tic-tac-toe<br />on sliding stones</p>
+          </div>
+          <div class="board shift-board" aria-hidden="true">
+            <span><i class="push-stone"></i></span>
+            <span><i class="push-stone"></i></span>
+            <span><i class="push-stone"></i></span>
+            <span><i class="push-stone"></i></span>
+            <span class="hole"></span>
+            <span><i class="push-stone"></i></span>
+            <span><i class="push-stone"></i></span>
+            <span><i class="push-stone"></i></span>
+            <span><i class="push-stone"></i></span>
+          </div>
+        </a>
+
+        <article class="game-card placeholder-card" aria-label="Empty game slot"></article>
+
+        <article class="game-card placeholder-card" aria-label="Empty game slot"></article>
+
+        <article class="game-card placeholder-card" aria-label="Empty game slot"></article>
+      </section>
+
+    </main>
+  </body>
+</html>
