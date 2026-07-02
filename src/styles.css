@@ -26,8 +26,8 @@
   color-scheme: dark;
   color: #e8ded6;
   background: #0e1013;
-  --card-width: 188px;
-  --card-height: 318px;
+  --card-width: 208px;
+  --card-height: 352px;
   font-family: "Proza", sans-serif;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -149,7 +149,7 @@ a {
   justify-content: space-between;
   width: var(--card-width);
   min-height: var(--card-height);
-  padding: 24px 18px 18px;
+  padding: 34px 18px 18px;
   overflow: hidden;
   border: 1px solid rgba(255, 255, 255, 0.065);
   border-radius: 8px;
@@ -265,7 +265,7 @@ a.game-card:hover {
 .card-copy h2 {
   margin: 0;
   color: #eaded4;
-  font-size: 22px;
+  font-size: 26px;
   line-height: 1.1;
 }
 
@@ -286,7 +286,7 @@ a.game-card:hover {
   display: grid;
   grid-template-columns: repeat(8, 1fr);
   grid-template-rows: repeat(8, 1fr);
-  width: min(148px, 100%);
+  width: min(168px, 100%);
   aspect-ratio: 1;
   margin: 28px 0 0;
   border: 2px solid #000000;
@@ -352,7 +352,7 @@ a.game-card:hover {
 
 .chung-board,
 .grid-board {
-  width: min(130px, 80%);
+  width: min(150px, 80%);
   aspect-ratio: 1;
   margin: 26px 0 20px;
 }
@@ -397,7 +397,7 @@ a.game-card:hover {
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
   gap: 0;
-  width: min(132px, 82%);
+  width: min(152px, 82%);
   aspect-ratio: 1;
   margin: 34px 0 0;
   padding: 0;
