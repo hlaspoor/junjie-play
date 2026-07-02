@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 630 630" role="img" aria-label="JP">
+  <rect width="630" height="630" rx="84" fill="#1b120f"/>
+  <rect x="54" y="54" width="522" height="522" rx="62" fill="none" stroke="#8f704d" stroke-width="22" opacity=".72"/>
+  <path d="M315 54v522M54 315h522" stroke="#8f704d" stroke-width="16" opacity=".3"/>
+  <text x="315" y="396" fill="#d8b287" font-family="Proza, Avenir Next, Arial, sans-serif" font-size="252" font-weight="800" letter-spacing="-10" text-anchor="middle">JP</text>
+  <circle cx="315" cy="315" r="46" fill="#33241d" stroke="#d8b287" stroke-width="14"/>
+</svg>
