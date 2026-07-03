@@ -233,6 +233,22 @@ a.game-card:hover {
   color: rgba(197, 178, 154, 0.78);
 }
 
+.four-up {
+  justify-content: flex-start;
+  background:
+    radial-gradient(circle at 50% 0%, rgba(159, 200, 214, 0.1), transparent 56%),
+    #171b26;
+  border-color: rgba(205, 199, 190, 0.18);
+}
+
+.four-up .card-copy h2 {
+  color: #eee6d9;
+}
+
+.four-up .card-copy p {
+  color: rgba(207, 199, 188, 0.76);
+}
+
 .yavalath {
   background:
     radial-gradient(circle at 50% 0%, rgba(58, 65, 112, 0.26), transparent 58%),
@@ -540,6 +556,86 @@ a.game-card:hover {
 .shift-board .stone.madder {
   --stone-fill: #c84c48;
   --stone-crescent: #963331;
+}
+
+.fourup-board {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 3px;
+  width: min(154px, 88%);
+  margin: 28px 0 0;
+  background: transparent;
+  overflow: visible;
+}
+
+.fourup-board span {
+  position: relative;
+  display: grid;
+  place-items: center;
+  min-width: 0;
+  aspect-ratio: 1;
+  border: 2px solid #555a61;
+  border-radius: 999px;
+  background: #191b20;
+  overflow: visible;
+}
+
+.fourup-board span:has(.fourup-stone) {
+  border-color: transparent;
+  background: transparent;
+}
+
+.fourup-board .void {
+  border-color: transparent;
+  background: transparent;
+}
+
+.fourup-stone {
+  position: absolute;
+  inset: -2px;
+  z-index: 1;
+  display: block;
+  border-radius: 999px;
+  background: var(--stone-fill);
+  box-shadow:
+    0 5px rgba(0, 0, 0, 0.34),
+    0 7px 9px rgba(0, 0, 0, 0.24);
+}
+
+.fourup-stone::before {
+  position: absolute;
+  right: 9%;
+  bottom: 9%;
+  width: 72%;
+  aspect-ratio: 1;
+  content: "";
+  border-radius: inherit;
+  background: var(--stone-crescent);
+  clip-path: polygon(100% 0, 100% 100%, 0 100%);
+  pointer-events: none;
+}
+
+.fourup-stone::after {
+  position: absolute;
+  right: 15%;
+  bottom: 15%;
+  width: 72%;
+  aspect-ratio: 1;
+  content: "";
+  border-radius: inherit;
+  background: var(--stone-fill);
+  clip-path: polygon(100% 0, 100% 100%, 0 100%);
+  pointer-events: none;
+}
+
+.fourup-stone.black {
+  --stone-fill: #3f87a8;
+  --stone-crescent: #7fc0d7;
+}
+
+.fourup-stone.white {
+  --stone-fill: #d9ccb8;
+  --stone-crescent: #f0e4d0;
 }
 
 .hex-board {
