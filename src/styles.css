@@ -27,7 +27,7 @@
   color: #e8ded6;
   background: #0e1013;
   --card-width: 208px;
-  --card-height: 352px;
+  --card-height: 318px;
   font-family: "Proza", sans-serif;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -112,7 +112,7 @@ a {
 .hero h1 {
   margin: 0;
   color: #f0e5da;
-  font-size: clamp(18px, 2vw, 25px);
+  font-size: 25px;
   font-weight: 700;
   letter-spacing: 0;
   line-height: 1;
@@ -153,7 +153,7 @@ a {
   justify-content: space-between;
   width: var(--card-width);
   min-height: var(--card-height);
-  padding: 34px 18px 18px;
+  padding: 24px 18px 14px;
   overflow: hidden;
   border: 1px solid rgba(255, 255, 255, 0.065);
   border-radius: 8px;
@@ -274,10 +274,10 @@ a.game-card:hover {
 }
 
 .card-copy p {
-  margin: 14px 0 0;
+  margin: 9px 0 0;
   color: rgba(232, 220, 210, 0.68);
   font-size: 12px;
-  line-height: 1.55;
+  line-height: 1.45;
 }
 
 .board {
@@ -292,7 +292,7 @@ a.game-card:hover {
   grid-template-rows: repeat(8, 1fr);
   width: min(168px, 100%);
   aspect-ratio: 1;
-  margin: 28px 0 0;
+  margin: 18px 0 0;
   border: 2px solid #000000;
   background: #000000;
   box-shadow: 0 10px 24px rgba(0, 0, 0, 0.34);
@@ -365,7 +365,7 @@ a.game-card:hover {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
-  margin: 34px 0 0;
+  margin: 22px 0 0;
   border: 2px solid #8a9287;
   background: #3b4741;
   overflow: hidden;
@@ -442,7 +442,7 @@ a.game-card:hover {
   gap: 0;
   width: min(152px, 82%);
   aspect-ratio: 1;
-  margin: 34px 0 0;
+  margin: 22px 0 0;
   padding: 0;
   border: 2px solid #8f704d;
   background: #33241d;
@@ -675,7 +675,7 @@ a.game-card:hover {
   }
 
   .hero h1 {
-    font-size: clamp(20px, 6vw, 23px);
+    font-size: 25px;
   }
 
   .hero p {
