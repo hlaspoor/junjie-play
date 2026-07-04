@@ -647,7 +647,7 @@ a.game-card:hover {
   grid-template-columns: repeat(7, 1fr);
   gap: 3px;
   width: min(154px, 88%);
-  margin: 28px 0 0;
+  margin: 22px 0 0;
   background: transparent;
   overflow: visible;
 }
