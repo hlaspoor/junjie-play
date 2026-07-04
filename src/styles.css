@@ -216,9 +216,7 @@ a.game-card:hover {
 }
 
 .mijnlieff .game-card {
-  background:
-    radial-gradient(circle at 50% 0%, rgba(240, 226, 197, 0.1), transparent 58%),
-    #343824;
+  background: #343824;
   border-color: rgba(240, 226, 197, 0.2);
 }
 
@@ -231,9 +229,7 @@ a.game-card:hover {
 }
 
 .kamisado .game-card {
-  background:
-    radial-gradient(circle at 50% 0%, rgba(230, 176, 199, 0.12), transparent 58%),
-    #2d1e28;
+  background: #2d1e28;
   border-color: rgba(230, 176, 199, 0.24);
 }
 
@@ -246,9 +242,7 @@ a.game-card:hover {
 }
 
 .chung-toi .game-card {
-  background:
-    radial-gradient(circle at 50% 0%, rgba(215, 205, 188, 0.08), transparent 56%),
-    #151b19;
+  background: #151b19;
   border-color: rgba(226, 214, 194, 0.2);
 }
 
@@ -261,9 +255,7 @@ a.game-card:hover {
 }
 
 .make-shift .game-card {
-  background:
-    radial-gradient(circle at 55% 0%, rgba(222, 188, 142, 0.12), transparent 56%),
-    #1b120f;
+  background: #1b120f;
   border-color: rgba(222, 188, 142, 0.24);
 }
 
@@ -276,9 +268,7 @@ a.game-card:hover {
 }
 
 .four-up .game-card {
-  background:
-    radial-gradient(circle at 50% 0%, rgba(159, 200, 214, 0.1), transparent 56%),
-    #171b26;
+  background: #171b26;
   border-color: rgba(205, 199, 190, 0.18);
 }
 
