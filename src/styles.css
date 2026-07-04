@@ -27,7 +27,6 @@
   color: #e8ded6;
   background: #0e1013;
   --card-width: 208px;
-  --card-height: 318px;
   font-family: "Proza", sans-serif;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -161,20 +160,30 @@ a {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(var(--card-width), var(--card-width)));
   justify-content: center;
-  gap: 16px;
+  gap: 24px 16px;
   width: 100%;
   max-width: calc(var(--card-width) * 6 + 16px * 5);
   margin: 10px auto 0;
 }
 
-.game-card {
-  position: relative;
+.game-tile {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   width: var(--card-width);
-  min-height: var(--card-height);
-  padding: 24px 18px 14px;
+}
+
+.game-card {
+  position: relative;
+  order: 1;
+  --board-size: 168px;
+  --fourup-board-width: 147px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: var(--card-width);
+  aspect-ratio: 1;
+  padding: 18px;
   overflow: hidden;
   border: 1px solid rgba(255, 255, 255, 0.065);
   border-radius: 8px;
@@ -206,8 +215,7 @@ a.game-card:hover {
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.045), transparent 42%);
 }
 
-.mijnlieff {
-  justify-content: flex-start;
+.mijnlieff .game-card {
   background:
     radial-gradient(circle at 50% 0%, rgba(240, 226, 197, 0.1), transparent 58%),
     #343824;
@@ -222,8 +230,7 @@ a.game-card:hover {
   color: rgba(240, 226, 197, 0.68);
 }
 
-.kamisado {
-  justify-content: flex-start;
+.kamisado .game-card {
   background:
     radial-gradient(circle at 50% 0%, rgba(230, 176, 199, 0.12), transparent 58%),
     #2d1e28;
@@ -238,8 +245,7 @@ a.game-card:hover {
   color: #c4acb8;
 }
 
-.chung-toi {
-  justify-content: flex-start;
+.chung-toi .game-card {
   background:
     radial-gradient(circle at 50% 0%, rgba(215, 205, 188, 0.08), transparent 56%),
     #151b19;
@@ -254,8 +260,7 @@ a.game-card:hover {
   color: rgba(184, 170, 151, 0.78);
 }
 
-.make-shift {
-  justify-content: flex-start;
+.make-shift .game-card {
   background:
     radial-gradient(circle at 55% 0%, rgba(222, 188, 142, 0.12), transparent 56%),
     #1b120f;
@@ -270,8 +275,7 @@ a.game-card:hover {
   color: rgba(197, 178, 154, 0.78);
 }
 
-.four-up {
-  justify-content: flex-start;
+.four-up .game-card {
   background:
     radial-gradient(circle at 50% 0%, rgba(159, 200, 214, 0.1), transparent 56%),
     #171b26;
@@ -319,13 +323,16 @@ a.game-card:hover {
 .card-copy {
   position: relative;
   z-index: 2;
+  order: 2;
+  min-height: 88px;
+  padding: 22px 6px 0;
   text-align: center;
 }
 
 .card-copy h2 {
   margin: 0;
   color: #eaded4;
-  font-size: 26px;
+  font-size: 24px;
   line-height: 1.1;
 }
 
@@ -346,9 +353,9 @@ a.game-card:hover {
   display: grid;
   grid-template-columns: repeat(8, 1fr);
   grid-template-rows: repeat(8, 1fr);
-  width: min(168px, 100%);
+  width: min(var(--board-size), 100%);
   aspect-ratio: 1;
-  margin: 18px 0 0;
+  margin: 0;
   border: 2px solid #000000;
   background: #000000;
   box-shadow: 0 10px 24px rgba(0, 0, 0, 0.34);
@@ -412,9 +419,9 @@ a.game-card:hover {
 
 .mijnlieff-board {
   position: relative;
-  width: min(154px, 84%);
+  width: min(var(--board-size), 100%);
   aspect-ratio: 1;
-  margin: 20px 0 0;
+  margin: 0;
   background: transparent;
   filter: brightness(0.9) saturate(0.88) contrast(1.03);
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.38);
@@ -456,16 +463,16 @@ a.game-card:hover {
 
 .chung-board,
 .grid-board {
-  width: min(150px, 80%);
+  width: min(var(--board-size), 100%);
   aspect-ratio: 1;
-  margin: 26px 0 20px;
+  margin: 0;
 }
 
 .chung-board {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
-  margin: 22px 0 0;
+  margin: 0;
   border: 2px solid #8a9287;
   background: #3b4741;
   overflow: hidden;
@@ -540,9 +547,9 @@ a.game-card:hover {
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
   gap: 0;
-  width: min(152px, 82%);
+  width: min(var(--board-size), 100%);
   aspect-ratio: 1;
-  margin: 22px 0 0;
+  margin: 0;
   padding: 0;
   border: 2px solid #8f704d;
   background: #33241d;
@@ -646,8 +653,8 @@ a.game-card:hover {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   gap: 3px;
-  width: min(154px, 88%);
-  margin: 22px 0 0;
+  width: min(var(--fourup-board-width), 100%);
+  margin: 0;
   background: transparent;
   overflow: visible;
 }
@@ -863,9 +870,6 @@ a.game-card:hover {
     font-size: clamp(10px, 3vw, 11px);
   }
 
-  .game-card {
-    min-height: 318px;
-  }
 }
 
 @media (max-width: 560px) {
@@ -883,37 +887,19 @@ a.game-card:hover {
   }
 
   .game-row {
-    grid-template-columns: minmax(0, 420px);
-    gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(var(--card-width), var(--card-width)));
+    gap: 22px 14px;
     margin-top: 0;
   }
 
-  .game-card {
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    min-height: 146px;
-    padding: 18px 16px;
-    gap: 16px;
-  }
-
-  .game-card.kamisado,
-  .game-card.mijnlieff,
-  .game-card.chung-toi,
-  .game-card.make-shift,
-  .game-card.four-up {
-    justify-content: space-between;
-  }
-
   .card-copy {
-    flex: 1 1 auto;
-    min-width: 0;
-    text-align: left;
+    min-height: 80px;
+    padding-top: 22px;
+    text-align: center;
   }
 
   .card-copy h2 {
-    font-size: 24px;
+    font-size: 23px;
     line-height: 1.05;
   }
 
@@ -924,29 +910,14 @@ a.game-card:hover {
   }
 
   .board {
-    flex: 0 0 auto;
     margin: 0;
   }
 
-  .kamisado-board {
-    width: 130px;
-  }
-
-  .mijnlieff-board {
-    width: 118px;
-  }
-
-  .chung-board,
-  .shift-board {
-    width: 112px;
-  }
-
-  .fourup-board {
-    width: 116px;
-    gap: 2px;
-  }
-
   .placeholder-card {
+    display: none;
+  }
+
+  .placeholder-tile {
     display: none;
   }
 }
@@ -970,12 +941,6 @@ a.game-card:hover {
     font-size: 10px;
   }
 
-  .game-card {
-    min-height: 132px;
-    padding: 15px 13px;
-    gap: 12px;
-  }
-
   .card-copy h2 {
     font-size: 21px;
   }
@@ -984,20 +949,4 @@ a.game-card:hover {
     font-size: 11px;
   }
 
-  .kamisado-board {
-    width: 112px;
-  }
-
-  .mijnlieff-board {
-    width: 102px;
-  }
-
-  .chung-board,
-  .shift-board {
-    width: 98px;
-  }
-
-  .fourup-board {
-    width: 100px;
-  }
 }
