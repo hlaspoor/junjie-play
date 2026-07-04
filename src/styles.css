@@ -416,7 +416,8 @@ a.game-card:hover {
   aspect-ratio: 1;
   margin: 20px 0 0;
   background: transparent;
-  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.3);
+  filter: brightness(0.9) saturate(0.88) contrast(1.03);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.38);
 }
 
 .mijn-board-svg {
