@@ -66,7 +66,7 @@ a {
   position: relative;
   min-height: 100vh;
   overflow-x: hidden;
-  padding: 20px 32px 32px;
+  padding: 20px 32px 68px;
   background:
     radial-gradient(circle at 0% 100%, rgba(216, 178, 135, 0.16), transparent 31%),
     radial-gradient(circle at 100% 100%, rgba(176, 137, 98, 0.14), transparent 33%),
@@ -895,6 +895,60 @@ a.game-card:hover {
   color: #f1e7de;
   font-size: 15px;
   font-weight: 800;
+}
+
+.site-footer {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 6px 18px;
+  margin: 0;
+  padding: 12px 18px 14px;
+  color: rgba(232, 220, 210, 0.58);
+  font-size: 12px;
+  line-height: 1.5;
+  text-align: center;
+  background: linear-gradient(180deg, rgba(67, 57, 47, 0), rgba(67, 57, 47, 0.94) 32%, rgba(67, 57, 47, 0.98));
+  backdrop-filter: blur(8px);
+}
+
+.site-footer p {
+  margin: 0;
+}
+
+.github-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  min-width: 0;
+  height: 26px;
+  padding: 0 8px;
+  color: #d8b287;
+  border-radius: 999px;
+  font-weight: 700;
+  transition:
+    color 160ms ease,
+    background-color 160ms ease;
+}
+
+.github-link:hover {
+  color: #f0e5da;
+  background: rgba(240, 229, 218, 0.08);
+}
+
+.github-link svg {
+  flex: 0 0 auto;
+  display: block;
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
 }
 
 @media (max-width: 720px) {
