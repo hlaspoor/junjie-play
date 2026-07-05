@@ -101,10 +101,13 @@ a {
   pointer-events: none;
   content: "";
   background-image:
-    linear-gradient(rgba(255, 255, 255, 0.046) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.034) 1px, transparent 1px);
-  background-size: 74px 74px;
-  mask-image: linear-gradient(to bottom, transparent 0%, black 16%, rgba(0, 0, 0, 0.72) 42%, rgba(0, 0, 0, 0.18) 72%, transparent 100%);
+    radial-gradient(circle, rgba(255, 255, 255, 0.052) 0 0.7px, transparent 0.8px),
+    radial-gradient(circle, rgba(27, 21, 17, 0.13) 0 0.8px, transparent 0.9px),
+    linear-gradient(112deg, transparent 0%, rgba(244, 219, 184, 0.024) 47%, transparent 48% 100%);
+  background-position: 0 0, 13px 19px, 0 0;
+  background-size: 27px 27px, 31px 31px, 180px 180px;
+  opacity: 0.72;
+  mask-image: linear-gradient(to bottom, transparent 0%, black 12%, rgba(0, 0, 0, 0.66) 48%, rgba(0, 0, 0, 0.2) 78%, transparent 100%);
 }
 
 .hero {
@@ -953,7 +956,7 @@ a.game-card:hover {
 
 @media (max-width: 720px) {
   .page-shell {
-    padding: 14px 18px 92px;
+    padding: 14px 18px 30px;
     overflow: auto;
   }
 
@@ -982,6 +985,16 @@ a.game-card:hover {
     font-size: clamp(10px, 3vw, 11px);
   }
 
+  .site-footer {
+    position: relative;
+    right: auto;
+    bottom: auto;
+    left: auto;
+    margin-top: 4px;
+    padding: 10px 0 0;
+    background: transparent;
+    backdrop-filter: none;
+  }
 }
 
 @media (max-width: 560px) {
