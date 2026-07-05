@@ -215,6 +215,19 @@ a.game-card:hover {
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.045), transparent 42%);
 }
 
+.hadron .game-card {
+  background: #0f2023;
+  border-color: rgba(197, 213, 204, 0.22);
+}
+
+.hadron .card-copy h2 {
+  color: #e6dfd2;
+}
+
+.hadron .card-copy p {
+  color: rgba(177, 170, 158, 0.9);
+}
+
 .mijnlieff .game-card {
   background: #343824;
   border-color: rgba(240, 226, 197, 0.2);
@@ -406,6 +419,61 @@ a.game-card:hover {
 .tower.purple { --tower-fill: #6c548a; }
 .tower.blue { --tower-fill: #3d7fa6; }
 .tower.orange { --tower-fill: #bd703c; }
+
+.hadron-board {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  width: min(var(--board-size), 100%);
+  aspect-ratio: 1;
+  margin: 0;
+  border: 1.2px solid #5c7270;
+  background: #1a383d;
+  overflow: hidden;
+  box-shadow:
+    0 7px 19px #030c0e57,
+    inset 0 0 0 0.4px #e6dfd214;
+}
+
+.hadron-board .cell {
+  position: relative;
+  display: grid;
+  place-items: center;
+  min-width: 0;
+  min-height: 0;
+  margin: 0;
+  padding: 0;
+  border-right: 0.4px solid #6f8784b8;
+  border-bottom: 0.4px solid #6f8784b8;
+  background: #203f45;
+}
+
+.hadron-board .cell.edge-right {
+  border-right: 0;
+}
+
+.hadron-board .cell.edge-bottom {
+  border-bottom: 0;
+}
+
+.hadron-board .checker {
+  display: block;
+  width: 78%;
+  aspect-ratio: 1;
+  border-radius: 3.2px;
+  box-shadow:
+    inset 0 0.8px #ffffff47,
+    inset 0 -1.6px #00000038,
+    0 1.6px #030c0e47;
+}
+
+.hadron-board .checker.red {
+  background: linear-gradient(145deg, #f4ecdd 0%, #eee6d7 48%, #bdb6a8 100%);
+}
+
+.hadron-board .checker.blue {
+  background: linear-gradient(145deg, #7dcced 0%, #62b6d7 46%, #1e6688 100%);
+}
 
 .mijnlieff-board {
   position: relative;
